@@ -19,11 +19,14 @@
 		D2F2509A21FBC06A004892D5 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F2509921FBC06A004892D5 /* Repo.swift */; };
 		D2F2509C21FBC07E004892D5 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F2509B21FBC07E004892D5 /* UIViewController+Rx.swift */; };
 		D2F2509E21FBC09D004892D5 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F2509D21FBC09D004892D5 /* ViewModelType.swift */; };
+		DF7141B0DE80579553641B1C /* Pods_MVVMFunctionsSubjectsObservables.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B313CA0EC68415A55E78E97 /* Pods_MVVMFunctionsSubjectsObservables.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E5A80D34CAA61B6A7CB1878 /* Pods-MVVMFunctionsSubjectsObservables.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMFunctionsSubjectsObservables.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMFunctionsSubjectsObservables/Pods-MVVMFunctionsSubjectsObservables.release.xcconfig"; sourceTree = "<group>"; };
 		25663E9B74792F40D428A4DC /* Pods_MVVMPureObservablesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMPureObservablesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38858E2C879713210FF66BF4 /* Pods-MVVMPureObservables.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMPureObservables.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMPureObservables/Pods-MVVMPureObservables.release.xcconfig"; sourceTree = "<group>"; };
+		3B313CA0EC68415A55E78E97 /* Pods_MVVMFunctionsSubjectsObservables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMFunctionsSubjectsObservables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4428BC3EA338E4ABFBF28D88 /* Pods-MVVMPureObservablesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMPureObservablesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMPureObservablesUITests/Pods-MVVMPureObservablesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		446919B9FAB3B0FDB45BAE0A /* Pods-MVVMPureObservablesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMPureObservablesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMPureObservablesTests/Pods-MVVMPureObservablesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		498FB08996F7E73844F10360 /* Pods-MVVMPureObservablesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMPureObservablesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMPureObservablesUITests/Pods-MVVMPureObservablesUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -31,6 +34,7 @@
 		69DF873BD5354E56FD28A91C /* Pods-MVVMPureObservablesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMPureObservablesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMPureObservablesTests/Pods-MVVMPureObservablesTests.release.xcconfig"; sourceTree = "<group>"; };
 		75E97F34E1281CF1ACC7F20D /* Pods_MVVMPureObservablesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMPureObservablesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4C7A53399F8671D728C8DD /* Pods_MVVMPureObservables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMPureObservables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C97F050D5FBA7BB9A219B408 /* Pods-MVVMFunctionsSubjectsObservables.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMFunctionsSubjectsObservables.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMFunctionsSubjectsObservables/Pods-MVVMFunctionsSubjectsObservables.debug.xcconfig"; sourceTree = "<group>"; };
 		D2B6E99A21FA60DB0025CDB8 /* MVVMFunctionsSubjectsObservables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMFunctionsSubjectsObservables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B6E99D21FA60DB0025CDB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2B6E9A421FA60DD0025CDB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63A78D40E4584DDFEC99CD0E /* Pods_MVVMPureObservables.framework in Frameworks */,
+				DF7141B0DE80579553641B1C /* Pods_MVVMFunctionsSubjectsObservables.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,7 @@
 				AA4C7A53399F8671D728C8DD /* Pods_MVVMPureObservables.framework */,
 				75E97F34E1281CF1ACC7F20D /* Pods_MVVMPureObservablesTests.framework */,
 				25663E9B74792F40D428A4DC /* Pods_MVVMPureObservablesUITests.framework */,
+				3B313CA0EC68415A55E78E97 /* Pods_MVVMFunctionsSubjectsObservables.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -77,6 +83,8 @@
 				69DF873BD5354E56FD28A91C /* Pods-MVVMPureObservablesTests.release.xcconfig */,
 				4428BC3EA338E4ABFBF28D88 /* Pods-MVVMPureObservablesUITests.debug.xcconfig */,
 				498FB08996F7E73844F10360 /* Pods-MVVMPureObservablesUITests.release.xcconfig */,
+				C97F050D5FBA7BB9A219B408 /* Pods-MVVMFunctionsSubjectsObservables.debug.xcconfig */,
+				0E5A80D34CAA61B6A7CB1878 /* Pods-MVVMFunctionsSubjectsObservables.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -245,7 +253,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MVVMPureObservables-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MVVMFunctionsSubjectsObservables-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -258,7 +266,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MVVMPureObservables/Pods-MVVMPureObservables-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-MVVMFunctionsSubjectsObservables/Pods-MVVMFunctionsSubjectsObservables-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -271,7 +279,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVVMPureObservables/Pods-MVVMPureObservables-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MVVMFunctionsSubjectsObservables/Pods-MVVMFunctionsSubjectsObservables-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -425,7 +433,7 @@
 		};
 		D2B6E9C321FA60DD0025CDB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E140CF6D0326B0AAD2F9352 /* Pods-MVVMPureObservables.debug.xcconfig */;
+			baseConfigurationReference = C97F050D5FBA7BB9A219B408 /* Pods-MVVMFunctionsSubjectsObservables.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -443,7 +451,7 @@
 		};
 		D2B6E9C421FA60DD0025CDB8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38858E2C879713210FF66BF4 /* Pods-MVVMPureObservables.release.xcconfig */;
+			baseConfigurationReference = 0E5A80D34CAA61B6A7CB1878 /* Pods-MVVMFunctionsSubjectsObservables.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
