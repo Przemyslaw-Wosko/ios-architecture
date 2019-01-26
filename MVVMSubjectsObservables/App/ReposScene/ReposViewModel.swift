@@ -9,44 +9,41 @@
 import RxSwift
 import RxCocoa
 
-protocol RepoViewModelInputs {
-    func viewWillAppear()
-    func didSelect(index: IndexPath)
-    func didSearch(query: String)
-}
-
-protocol RepoViewModelOutputs {
-    var loading: Driver<Bool> { get }
-    var repos: Driver<[RepoViewModel]> { get }
-    var selectedRepoId: Driver<Int> { get }
-}
-
-protocol ReposViewModelType {
-    var inputs: RepoViewModelInputs { get }
-    var outputs: RepoViewModelOutputs { get }
-}
-
-final class ReposViewModel: ReposViewModelType, RepoViewModelInputs, RepoViewModelOutputs {
-    init() {
+final class ReposViewModel {
+    // Inputs
+    let viewWillAppearSubject = PublishSubject<Void>()
+    let selectedIndexSubject = PublishSubject<IndexPath>()
+    let searchQuerySubject = BehaviorSubject(value: "")
+    
+    // Outputs
+    var loading: Driver<Bool>
+    var repos: Driver<[RepoViewModel]>
+    var selectedRepoId: Driver<Int>
+    
+    private let networkingService: NetworkingService
+    
+    init(networkingService: NetworkingService) {
+        self.networkingService = networkingService
+        
         let loading = ActivityIndicator()
         self.loading = loading.asDriver()
         
         let initialRepos = self.viewWillAppearSubject
             .asObservable()
             .flatMap { _ in
-                AppEnvironment.current.networkingService
+                networkingService
                     .searchRepos(withQuery: "swift")
                     .trackActivity(loading)
             }
             .asDriver(onErrorJustReturn: [])
         
-        let searchRepos = self.didSearchSubject
+        let searchRepos = self.searchQuerySubject
             .asObservable()
             .filter { $0.count > 2}
             .throttle(0.3, scheduler: MainScheduler.instance)
             .distinctUntilChanged()
             .flatMapLatest { query in
-                AppEnvironment.current.networkingService
+                networkingService
                     .searchRepos(withQuery: query)
                     .trackActivity(loading)
             }
@@ -56,7 +53,7 @@ final class ReposViewModel: ReposViewModelType, RepoViewModelInputs, RepoViewMod
         
         self.repos = repos.map { $0.map { RepoViewModel(repo: $0)} }
         
-        self.selectedRepoId = self.didSelectSubject
+        self.selectedRepoId = self.selectedIndexSubject
             .asObservable()
             .withLatestFrom(repos) { (indexPath, repos) in
                 return repos[indexPath.item]
@@ -64,28 +61,6 @@ final class ReposViewModel: ReposViewModelType, RepoViewModelInputs, RepoViewMod
             .map { $0.id }
             .asDriver(onErrorJustReturn: 0)
     }
-    
-    private let viewWillAppearSubject = PublishSubject<Void>()
-    func viewWillAppear() {
-        viewWillAppearSubject.onNext(())
-    }
-    
-    private let didSelectSubject = PublishSubject<IndexPath>()
-    func didSelect(index: IndexPath) {
-        didSelectSubject.onNext(index)
-    }
-    
-    private let didSearchSubject = PublishSubject<String>()
-    func didSearch(query: String) {
-        didSearchSubject.onNext(query)
-    }
-    
-    let loading: Driver<Bool>
-    let repos: Driver<[RepoViewModel]>
-    let selectedRepoId: Driver<Int>
-    
-    var inputs: RepoViewModelInputs { return self }
-    var outputs: RepoViewModelOutputs { return self }
 }
 
 struct RepoViewModel {
