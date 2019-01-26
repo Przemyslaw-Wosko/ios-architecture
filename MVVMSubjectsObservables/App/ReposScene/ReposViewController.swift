@@ -53,26 +53,17 @@ class ReposViewController: UIViewController {
     private func bindViewModel() {
         rx.viewWillAppear
             .asObservable()
-            .subscribe(onNext: { [weak self] _ in
-                guard let strongSelf = self else { return }
-                strongSelf.viewModel.viewWillAppear()
-            })
+            .bind(to: viewModel.viewWillAppearSubject)
             .disposed(by: disposeBag)
         
         tableView.rx.itemSelected
             .asObservable()
-            .subscribe(onNext: { [weak self] indexPath in
-                guard let strongSelf = self else { return }
-                strongSelf.viewModel.didSelect(index: indexPath)
-            })
+            .bind(to: viewModel.selectedIndexSubject)
             .disposed(by: disposeBag)
         
         searchController.searchBar.rx.text.orEmpty
             .asObservable()
-            .subscribe(onNext: { [weak self] query in
-                guard let strongSelf = self else { return }
-                strongSelf.viewModel.didSearch(query: query)
-            })
+            .bind(to: viewModel.searchQuerySubject)
             .disposed(by: disposeBag)
 
         

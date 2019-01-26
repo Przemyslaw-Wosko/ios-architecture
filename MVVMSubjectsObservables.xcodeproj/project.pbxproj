@@ -11,7 +11,6 @@
 		D2B6E99E21FA60DB0025CDB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6E99D21FA60DB0025CDB8 /* AppDelegate.swift */; };
 		D2B6E9A521FA60DD0025CDB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2B6E9A421FA60DD0025CDB8 /* Assets.xcassets */; };
 		D2B6E9A821FA60DD0025CDB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B6E9A621FA60DD0025CDB8 /* LaunchScreen.storyboard */; };
-		D2F05D3D21FCBB5400BFC978 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F05D3C21FCBB5400BFC978 /* AppEnvironment.swift */; };
 		D2F2509221FB2C00004892D5 /* ReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F2509121FB2C00004892D5 /* ReposViewModel.swift */; };
 		D2F2509421FB60B7004892D5 /* NetworkingApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F2509321FB60B7004892D5 /* NetworkingApi.swift */; };
 		D2F2509621FBBBB8004892D5 /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F2509521FBBBB8004892D5 /* ReposViewController.swift */; };
@@ -35,12 +34,11 @@
 		75E97F34E1281CF1ACC7F20D /* Pods_MVVMPureObservablesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMPureObservablesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4C7A53399F8671D728C8DD /* Pods_MVVMPureObservables.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMPureObservables.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C97F050D5FBA7BB9A219B408 /* Pods-MVVMFunctionsSubjectsObservables.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMFunctionsSubjectsObservables.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVMFunctionsSubjectsObservables/Pods-MVVMFunctionsSubjectsObservables.debug.xcconfig"; sourceTree = "<group>"; };
-		D2B6E99A21FA60DB0025CDB8 /* MVVMFunctionsSubjectsObservables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMFunctionsSubjectsObservables.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2B6E99A21FA60DB0025CDB8 /* MVVMSubjectsObservables.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMSubjectsObservables.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2B6E99D21FA60DB0025CDB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2B6E9A421FA60DD0025CDB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2B6E9A721FA60DD0025CDB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2B6E9A921FA60DD0025CDB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2F05D3C21FCBB5400BFC978 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		D2F2509121FB2C00004892D5 /* ReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewModel.swift; sourceTree = "<group>"; };
 		D2F2509321FB60B7004892D5 /* NetworkingApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingApi.swift; sourceTree = "<group>"; };
 		D2F2509521FBBBB8004892D5 /* ReposViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +90,7 @@
 		D2B6E99121FA60DB0025CDB8 = {
 			isa = PBXGroup;
 			children = (
-				D2B6E99C21FA60DB0025CDB8 /* MVVMFunctionsSubjectsObservables */,
+				D2B6E99C21FA60DB0025CDB8 /* MVVMSubjectsObservables */,
 				D2B6E99B21FA60DB0025CDB8 /* Products */,
 				699006A6823DC4C7E3537590 /* Pods */,
 				4F2E59FC94FBB6659C7287C5 /* Frameworks */,
@@ -102,12 +100,12 @@
 		D2B6E99B21FA60DB0025CDB8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2B6E99A21FA60DB0025CDB8 /* MVVMFunctionsSubjectsObservables.app */,
+				D2B6E99A21FA60DB0025CDB8 /* MVVMSubjectsObservables.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D2B6E99C21FA60DB0025CDB8 /* MVVMFunctionsSubjectsObservables */ = {
+		D2B6E99C21FA60DB0025CDB8 /* MVVMSubjectsObservables */ = {
 			isa = PBXGroup;
 			children = (
 				D2F250A121FBC1A7004892D5 /* App */,
@@ -115,15 +113,7 @@
 				D2B6E9A621FA60DD0025CDB8 /* LaunchScreen.storyboard */,
 				D2B6E9A921FA60DD0025CDB8 /* Info.plist */,
 			);
-			path = MVVMFunctionsSubjectsObservables;
-			sourceTree = "<group>";
-		};
-		D2F05D3E21FCBB6D00BFC978 /* Environments */ = {
-			isa = PBXGroup;
-			children = (
-				D2F05D3C21FCBB5400BFC978 /* AppEnvironment.swift */,
-			);
-			path = Environments;
+			path = MVVMSubjectsObservables;
 			sourceTree = "<group>";
 		};
 		D2F2509F21FBC18A004892D5 /* Models */ = {
@@ -148,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				D2B6E99D21FA60DB0025CDB8 /* AppDelegate.swift */,
-				D2F05D3E21FCBB6D00BFC978 /* Environments */,
 				D2F250A021FBC18E004892D5 /* Utils */,
 				D2F2509F21FBC18A004892D5 /* Models */,
 				D2F250A321FBC1BF004892D5 /* Networking */,
@@ -177,9 +166,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D2B6E99921FA60DB0025CDB8 /* MVVMFunctionsSubjectsObservables */ = {
+		D2B6E99921FA60DB0025CDB8 /* MVVMSubjectsObservables */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D2B6E9C221FA60DD0025CDB8 /* Build configuration list for PBXNativeTarget "MVVMFunctionsSubjectsObservables" */;
+			buildConfigurationList = D2B6E9C221FA60DD0025CDB8 /* Build configuration list for PBXNativeTarget "MVVMSubjectsObservables" */;
 			buildPhases = (
 				3C9D4179AF0CC150B8415514 /* [CP] Check Pods Manifest.lock */,
 				D2B6E99621FA60DB0025CDB8 /* Sources */,
@@ -191,9 +180,9 @@
 			);
 			dependencies = (
 			);
-			name = MVVMFunctionsSubjectsObservables;
+			name = MVVMSubjectsObservables;
 			productName = MVVMPureObservables;
-			productReference = D2B6E99A21FA60DB0025CDB8 /* MVVMFunctionsSubjectsObservables.app */;
+			productReference = D2B6E99A21FA60DB0025CDB8 /* MVVMSubjectsObservables.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -211,7 +200,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D2B6E99521FA60DB0025CDB8 /* Build configuration list for PBXProject "MVVMFunctionsSubjectsObservables" */;
+			buildConfigurationList = D2B6E99521FA60DB0025CDB8 /* Build configuration list for PBXProject "MVVMSubjectsObservables" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -224,7 +213,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D2B6E99921FA60DB0025CDB8 /* MVVMFunctionsSubjectsObservables */,
+				D2B6E99921FA60DB0025CDB8 /* MVVMSubjectsObservables */,
 			);
 		};
 /* End PBXProject section */
@@ -297,7 +286,6 @@
 				D2F2509C21FBC07E004892D5 /* UIViewController+Rx.swift in Sources */,
 				D2F2509221FB2C00004892D5 /* ReposViewModel.swift in Sources */,
 				D2F2509E21FBC09D004892D5 /* ViewModelType.swift in Sources */,
-				D2F05D3D21FCBB5400BFC978 /* AppEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,12 +425,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MVVMFunctionsSubjectsObservables/Info.plist;
+				INFOPLIST_FILE = MVVMSubjectsObservables/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tailec.MVVMFunctionsSubjectsObservables;
+				PRODUCT_BUNDLE_IDENTIFIER = tailec.MVVMSubjectsObservables;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -455,12 +443,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MVVMFunctionsSubjectsObservables/Info.plist;
+				INFOPLIST_FILE = MVVMSubjectsObservables/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tailec.MVVMFunctionsSubjectsObservables;
+				PRODUCT_BUNDLE_IDENTIFIER = tailec.MVVMSubjectsObservables;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -470,7 +458,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D2B6E99521FA60DB0025CDB8 /* Build configuration list for PBXProject "MVVMFunctionsSubjectsObservables" */ = {
+		D2B6E99521FA60DB0025CDB8 /* Build configuration list for PBXProject "MVVMSubjectsObservables" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D2B6E9C021FA60DD0025CDB8 /* Debug */,
@@ -479,7 +467,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D2B6E9C221FA60DD0025CDB8 /* Build configuration list for PBXNativeTarget "MVVMFunctionsSubjectsObservables" */ = {
+		D2B6E9C221FA60DD0025CDB8 /* Build configuration list for PBXNativeTarget "MVVMSubjectsObservables" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D2B6E9C321FA60DD0025CDB8 /* Debug */,
