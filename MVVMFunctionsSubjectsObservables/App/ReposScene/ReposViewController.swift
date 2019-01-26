@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 class ReposViewController: UIViewController {
-    var viewModel:  ReposViewModel!
+    private let viewModel: ReposViewModel
     
     private let tableView = UITableView()
     let searchController = UISearchController(searchResultsController: nil)
@@ -21,8 +21,8 @@ class ReposViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     init(viewModel: ReposViewModel) {
-        super.init(nibName: nil, bundle: nil)
         self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -51,23 +51,42 @@ class ReposViewController: UIViewController {
     }
     
     private func bindViewModel() {
-        let input = ReposViewModel.Input(ready: rx.viewWillAppear.asDriver(),
-                                            selectedIndex: tableView.rx.itemSelected.asDriver(),
-                                            searchText: searchController.searchBar.rx.text.orEmpty.asDriver())
+        rx.viewWillAppear
+            .asObservable()
+            .subscribe(onNext: { [weak self] _ in
+                guard let strongSelf = self else { return }
+                strongSelf.viewModel.viewWillAppear()
+            })
+            .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .asObservable()
+            .subscribe(onNext: { [weak self] indexPath in
+                guard let strongSelf = self else { return }
+                strongSelf.viewModel.didSelect(index: indexPath)
+            })
+            .disposed(by: disposeBag)
+        
+        searchController.searchBar.rx.text.orEmpty
+            .asObservable()
+            .subscribe(onNext: { [weak self] query in
+                guard let strongSelf = self else { return }
+                strongSelf.viewModel.didSearch(query: query)
+            })
+            .disposed(by: disposeBag)
 
-        let output = viewModel.transform(input: input)
-
-        output.repos
+        
+        viewModel.repos
             .drive(tableView.rx.items(cellIdentifier: "Cell", cellType: UITableViewCell.self)) { (row, element, cell) in
                 cell.textLabel?.text = element.name
             }
             .disposed(by: disposeBag)
-        
-        output.loading
+
+        viewModel.loading
             .drive(UIApplication.shared.rx.isNetworkActivityIndicatorVisible)
             .disposed(by: disposeBag)
-        
-        output.selectedRepoId
+
+        viewModel.selectedRepoId
             .drive(onNext: { [weak self] repoId in
                 guard let strongSelf = self else { return }
                 let alertController = UIAlertController(title: "\(repoId)", message: nil, preferredStyle: .alert)

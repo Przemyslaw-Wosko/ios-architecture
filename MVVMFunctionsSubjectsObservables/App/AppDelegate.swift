@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         if let window = window {            
-            let viewModel = ReposViewModel(dependencies: ReposViewModel.Dependencies(networking: NetworkingApi()))
+            let viewModel = ReposViewModel()
             let viewController = ReposViewController(viewModel: viewModel)
             
             window.rootViewController = UINavigationController(rootViewController: viewController)

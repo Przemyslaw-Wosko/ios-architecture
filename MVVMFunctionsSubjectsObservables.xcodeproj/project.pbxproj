@@ -11,6 +11,7 @@
 		D2B6E99E21FA60DB0025CDB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B6E99D21FA60DB0025CDB8 /* AppDelegate.swift */; };
 		D2B6E9A521FA60DD0025CDB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2B6E9A421FA60DD0025CDB8 /* Assets.xcassets */; };
 		D2B6E9A821FA60DD0025CDB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B6E9A621FA60DD0025CDB8 /* LaunchScreen.storyboard */; };
+		D2F05D3D21FCBB5400BFC978 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F05D3C21FCBB5400BFC978 /* AppEnvironment.swift */; };
 		D2F2509221FB2C00004892D5 /* ReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F2509121FB2C00004892D5 /* ReposViewModel.swift */; };
 		D2F2509421FB60B7004892D5 /* NetworkingApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F2509321FB60B7004892D5 /* NetworkingApi.swift */; };
 		D2F2509621FBBBB8004892D5 /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F2509521FBBBB8004892D5 /* ReposViewController.swift */; };
@@ -35,6 +36,7 @@
 		D2B6E9A421FA60DD0025CDB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2B6E9A721FA60DD0025CDB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2B6E9A921FA60DD0025CDB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2F05D3C21FCBB5400BFC978 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		D2F2509121FB2C00004892D5 /* ReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewModel.swift; sourceTree = "<group>"; };
 		D2F2509321FB60B7004892D5 /* NetworkingApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingApi.swift; sourceTree = "<group>"; };
 		D2F2509521FBBBB8004892D5 /* ReposViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 			path = MVVMFunctionsSubjectsObservables;
 			sourceTree = "<group>";
 		};
+		D2F05D3E21FCBB6D00BFC978 /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				D2F05D3C21FCBB5400BFC978 /* AppEnvironment.swift */,
+			);
+			path = Environments;
+			sourceTree = "<group>";
+		};
 		D2F2509F21FBC18A004892D5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				D2B6E99D21FA60DB0025CDB8 /* AppDelegate.swift */,
+				D2F05D3E21FCBB6D00BFC978 /* Environments */,
 				D2F250A021FBC18E004892D5 /* Utils */,
 				D2F2509F21FBC18A004892D5 /* Models */,
 				D2F250A321FBC1BF004892D5 /* Networking */,
@@ -278,6 +289,7 @@
 				D2F2509C21FBC07E004892D5 /* UIViewController+Rx.swift in Sources */,
 				D2F2509221FB2C00004892D5 /* ReposViewModel.swift in Sources */,
 				D2F2509E21FBC09D004892D5 /* ViewModelType.swift in Sources */,
+				D2F05D3D21FCBB5400BFC978 /* AppEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
