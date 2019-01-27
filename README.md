@@ -35,4 +35,6 @@ Checkout `mvvm-rxswift-pure-observables` branch:
 
 `git checkout mvvm-rxswift-pure-observables`
 
-No `pod install` is required in this example.
+Install dependencies:
+
+ `pod install`
