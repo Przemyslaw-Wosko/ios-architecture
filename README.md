@@ -33,6 +33,6 @@ Clone the repository:
 
 Checkout `mvvm-rxswift-pure-observables` branch:
 
-`git checkout mvvm-delegates`
+`git checkout mvvm-rxswift-pure-observables`
 
 No `pod install` is required in this example.
